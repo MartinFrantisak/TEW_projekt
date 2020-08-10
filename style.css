@@ -1,0 +1,319 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+/*NavBar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: white;
+    width: 100%;
+}
+.nav_title {
+    font-size: 48px;
+    font-family: Verdana;
+    margin: 8px;
+    padding: 10px 50px;
+    color: black;
+}
+.nav_links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav_links li {
+    list-style: none;
+}
+.nav_links li a {
+    font-size: 24px;
+    font-family: Verdana;
+    text-decoration: none;
+    color:lightgrey;
+    padding: 35px;
+    justify-content: space-between;
+    display: block;
+    transition: color ease 0.2s;
+}
+.nav_links li a:hover {
+    color: black;
+    display: flex;
+}
+.toggle {
+    position: absolute;
+    top: 40px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+@media (max-width: 835px) {
+
+    .nav_title {
+        margin: 0 auto ;
+    }
+    .toggle {
+        display: flex;
+    }
+    .nav_links {
+        display: none;
+        width: auto;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+    }
+    .nav_links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav_links li {
+        margin: 0 auto;
+    }
+    .nav_links li a {
+        font-size: 20px;
+        font-family: Verdana;
+        text-decoration: none;
+        color:lightgrey;
+        padding: 10px;
+        display: flex;
+    }
+    .nav_links li a:hover {
+        color: black;
+    }
+    .nav_links.active {
+        margin: 0 auto;
+        display: flex;
+    }
+}
+
+@media (max-width: 1020px) {
+    .box1 .button1 {
+        margin-top: 1000px;
+    }
+
+}
+
+
+/*SlideShow*/
+.box1 {
+    display: block;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    position: absolute;
+}
+.box1>* {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+
+.box1 .slide:nth-child(1) {
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url("img/bcg1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.box1 .slide:nth-child(2) {
+    animation-delay: 2s;
+    background-image: url("img/bcg2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.box1 .slide:nth-child(3) {
+    animation-delay: 5s;
+    background-image: url("img/bcg3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.box1 .slide:nth-child(4) {
+    animation-delay: 8s;
+    background-image: url("img/bcg4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes slide {
+    0% { left: 100%; width: 100%;}
+    5% { left: 0%;}
+    25% { left: 0%;}
+    30% { left: -100%; width: 100%;}
+    31% { left: -100%; width: 0%;}
+    100% { left: 100%; width: 0%;}
+}
+
+/*Button*/
+.button1 {
+    font-family: Verdana;
+    display: block;
+    font-size: 1.5em;
+    margin: 0 auto;
+    margin-top: 880px;
+    align-items: center;
+    text-align: center;
+    color: lightgrey;
+    background-color: black;
+    transition: color ease 300ms, background-color ease 400ms;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    outline: none;
+}
+
+.button1:hover {
+    color: black;
+    background-color: lightgrey;
+    border: none;
+}
+
+.box2 {
+    padding-top: 150px;
+    margin-top: 500px;
+    height: 100vh;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+h1 {
+    text-align: center;
+    font-family: Verdana;
+    padding-bottom: 15px;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: dimgrey;
+    font-size: 2.1rem;
+}
+
+.box2 .labelText {
+    text-align: center;
+    font-family: Verdana;
+    margin: 0 auto;
+    display: block;
+    margin-top: 25px;
+    color: black;
+}
+
+.box2 .inputText {
+    text-align: center;
+    font-family: Verdana;
+    margin: 0 auto;
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 30px;
+    outline: none;
+    padding: 8px;
+}
+
+.box2 .submitButton {
+    font-family: Verdana;
+    display: block;
+    font-size: 1em;
+    margin: 0 auto;
+    margin-top: 25px;
+    align-items: center;
+    text-align: center;
+    color: lightgrey;
+    background-color: black;
+    transition: color ease 300ms, background-color ease 400ms;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    outline: none;
+}
+.box2 .submitButton:hover {
+    color: black;
+    background-color: lightgrey;
+    border: none;
+}
+
+.box2 input:hover {
+    border: 2px solid black;
+}
+
+/*Cities*/
+.boxCurrent {
+    height: 400px;
+    width: 500px;
+    margin: 0 auto;
+    color: black;
+    padding-top: 50px;
+    margin-left: 50px;
+    display: flex;
+}
+
+.boxCurrent div header{
+    font-size: 2em;
+    margin:0 auto;
+    display: flex;
+}
+.boxCurrent div header img {
+    width: 125px;
+    height: 125px;
+}
+
+.boxCurrent div section span {
+    margin: 0 auto ;
+    font-size: 0.9rem;
+    display: flex;
+}
+
+.deleteButton {
+    font-family: Verdana;
+    display: block;
+    font-size: 1.2em;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    color: black;
+    background-color: red;
+    transition: color ease 300ms, background-color ease 400ms;
+    border: none;
+    padding: 10px 250px;
+    border-radius: 25px;
+    outline: none;
+    margin-top: 100px;
+}
+.deleteButton:hover {
+    color: black;
+    background-color: green;
+    border: none;
+}
+
+.backImg {
+    height: 65px;
+    width: 95px;
+    right: 0;
+    cursor: pointer;
+    position: absolute;
+}
+
+.copy {
+    font-family: Verdana;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 200px;
+
+}
