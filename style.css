@@ -45,6 +45,8 @@ html, body
     color: black;
     display: flex;
 }
+
+/*Burger*/
 .toggle {
     position: absolute;
     top: 40px;
@@ -61,6 +63,7 @@ html, body
     background-color: black;
     border-radius: 10px;
 }
+/*Resolutions*/
 @media (max-width: 835px) {
 
     .nav_title {
@@ -101,15 +104,6 @@ html, body
         display: flex;
     }
 }
-
-@media (max-width: 1020px) {
-    .box1 .button1 {
-        margin-top: 1000px;
-    }
-
-}
-
-
 /*SlideShow*/
 .box1 {
     display: block;
@@ -161,8 +155,7 @@ html, body
     31% { left: -100%; width: 0%;}
     100% { left: 100%; width: 0%;}
 }
-
-/*Button*/
+/*Slide Button*/
 .button1 {
     font-family: Verdana;
     display: block;
@@ -179,13 +172,13 @@ html, body
     border-radius: 50px;
     outline: none;
 }
-
 .button1:hover {
     color: black;
     background-color: lightgrey;
     border: none;
 }
 
+/*Box 2*/
 .box2 {
     padding-top: 150px;
     margin-top: 500px;
@@ -260,14 +253,17 @@ h1 {
     margin: 0 auto;
     color: black;
     padding-top: 50px;
-    margin-left: 50px;
+    margin-left: 75px;
     display: flex;
+    margin-right: 25px;
 }
 
 .boxCurrent div header{
     font-size: 2em;
     margin:0 auto;
     display: flex;
+    font-family: Verdana;
+    margin-left: 40px;
 }
 .boxCurrent div header img {
     width: 125px;
@@ -276,8 +272,10 @@ h1 {
 
 .boxCurrent div section span {
     margin: 0 auto ;
-    font-size: 0.9rem;
-    display: flex;
+    font-size: 1.3rem;
+    display: inline;
+    font-family: Verdana;
+    margin-left: 40px;
 }
 
 .deleteButton {
@@ -316,4 +314,30 @@ h1 {
     text-align: center;
     margin-top: 200px;
 
+}
+
+.down {
+    cursor: pointer;
+}
+
+/*About project*/
+.projectArrow {
+    margin: 0 auto;
+    height: 125px;
+    width: 125px;
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: Verdana;
+    color: darkgrey;
+    margin-left: 15px;
+}
+
+.prjA {
+    font-family: Verdana;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin-left: 20px;
 }

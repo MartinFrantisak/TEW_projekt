@@ -6,8 +6,6 @@ toggle.addEventListener('click', () => {
     navLinks.classList.toggle('active')
 });
 
-
-
 /*Scroll*/
 function Scroll(target, duration) {
     var target = document.querySelector(target);
@@ -42,8 +40,14 @@ backImg.addEventListener('click', function() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 });
 
-/*API call*/
+var down = document.querySelector('.down');
+down.addEventListener('click', function() {
+    Scroll('.section2', 1000);
+});
 
+
+
+/*API call*/
 const key = 'abb4908e0044fe423996239852970f58';
 const map = 'citiesMap';
 const mapOfCities = loadMap();
@@ -97,11 +101,14 @@ function weatherIcon(weatherId) {
     return `http://openweathermap.org/img/wn/${weatherId}@2x.png`;
 }
 
-
 function loadMap() {
     return localStorage.getItem(map) ? new Map(JSON.parse(localStorage.getItem(map))) : new Map();
 }
 
+function deleteStorage() {
+    localStorage.clear();
+    location.reload();
+}
 
 /*Animations*/
 const box1 = document.querySelector(".box1");
@@ -112,9 +119,3 @@ const tl = new TimelineMax();
 tl.fromTo(navbar, 0.8, {x:"-100%"}, {x: "0%", ease: Power2.easeInOut})
     .fromTo(box1, 1, {opacity: "0"}, {opacity: "1"})
          .fromTo(button1, 0.5, {y:"210%"}, {y: "0%", ease: Power2.easeInOut});
-
-
-function deleteStorage() {
-    localStorage.clear();
-    location.reload();
-}
